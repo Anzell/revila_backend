@@ -10,10 +10,10 @@ describe("game repository impl", function () {
             new Game({title: "Max Payne", approval: 10})
         ];
         const datasourceMock: any = {
-            searchGame: jest.fn().mockReturnValue(expected)
+            searchGames: jest.fn().mockReturnValue(expected)
         }
-        const usecase = new GameRepositoryImpl(datasourceMock);
-        const result = await usecase.searchGame("max payne");
+        const repository = new GameRepositoryImpl(datasourceMock);
+        const result = await repository.searchGame("max payne");
         expect(result).toStrictEqual(Right(expected));
     });
 
@@ -21,8 +21,8 @@ describe("game repository impl", function () {
         const repositoryMock: any = {
             searchGame: jest.fn().mockRejectedValue(new ServerException())
         }
-        const usecase = new GameRepositoryImpl(repositoryMock);
-        const result = await usecase.searchGame("max payne");
+        const repository = new GameRepositoryImpl(repositoryMock);
+        const result = await repository.searchGame("max payne");
         expect(result).toStrictEqual(Left(new ServerFailure()));
     });
 });

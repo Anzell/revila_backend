@@ -4,7 +4,8 @@
   "description": "Em desenvolvimento - Servidor para app de jogos",
   "main": "build/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --collect-coverage",
+    "start-fake-game-rest": "json-server --watch fake_db.json"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,8 @@
     "ts-jest": "^28.0.5"
   },
   "dependencies": {
-    "either": "^0.0.1",
-    "either-ts": "^1.0.27",
+    "axios": "^0.27.2",
+    "json-server": "^0.17.0",
     "purify-ts": "^1.2.2"
   }
 }

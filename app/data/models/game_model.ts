@@ -10,8 +10,7 @@ export class GameModel extends Game {
         };
     }
 
-    static fromJson(serialized: string): GameModel {
-        const json = JSON.parse(serialized);
+    static fromJson(json: any): GameModel {
         return new GameModel({
             title: json['title'],
             approval: json['approval'],

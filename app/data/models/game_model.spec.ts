@@ -14,12 +14,12 @@ describe("game model", function() {
     });
 
     it("should convert json to Model", function() {
-        const result = GameModel.fromJson(JSON.stringify({
+        const result = GameModel.fromJson({
             'title': "max payne",
             'approval': 100,
             'thumbnail': undefined,
             'uid': undefined
-        }));
+        });
         expect(result).toStrictEqual(gameExample);
     });
 });

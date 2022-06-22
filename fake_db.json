@@ -1,0 +1,16 @@
+{
+    "games": [
+        {
+            "title": "max payne 3",
+            "thumbnail": "https://s2.glbimg.com/BsBBqF3LpKNFlIQCSoA2caVgLjs=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/T/S/qfnXu0SFqegnQ4Yo1x8g/2012-03-07-max-payne-3-cover-art.jpg",
+            "approval": 100,
+            "uid": "1"
+        },
+        {
+            "title": "grand theft auto V",
+            "thumbnail": "http://s2.glbimg.com/Sykd3zf6hdvVGv41G4Y6rvhZg38=/290x355/s2.glbimg.com/vzNXMUGlexLYtTxSuxdX47CTJRLLkRxw_Iug2BPwenNIoz-HdGixxa_8qOZvMp3w/s.glbimg.com/jo/g1/f/original/2013/04/02/ogt0rx5z.jpg",
+            "approval": 70,
+            "uid": "2"
+        }
+    ]
+}

@@ -22,6 +22,6 @@ export class SearchGamesUsecaseParams {
     }   
 }
 
-type SearchGamesUsecaseParamsArgs = {
+interface SearchGamesUsecaseParamsArgs {
     readonly query: string;
 }
