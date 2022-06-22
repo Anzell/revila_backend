@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strict": true,
+    "rootDir": "app",
+    "outDir": "build",
+    "target": "ES2021",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+  },
+  "compileOnSave": true
+}

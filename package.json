@@ -1,0 +1,30 @@
+{
+  "name": "revila_backend",
+  "version": "1.0.0",
+  "description": "Em desenvolvimento - Servidor para app de jogos",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anzell/revila_backend.git"
+  },
+  "keywords": [],
+  "author": "Andriél Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anzell/revila_backend/issues"
+  },
+  "homepage": "https://github.com/Anzell/revila_backend#readme",
+  "devDependencies": {
+    "@types/jest": "^28.1.3",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5"
+  },
+  "dependencies": {
+    "either": "^0.0.1",
+    "either-ts": "^1.0.27",
+    "purify-ts": "^1.2.2"
+  }
+}

@@ -1,0 +1,7 @@
+/temp
+.env
+.idea
+coverage
+node_modules
+tsconfig.tsbuildinfo
+package-lock.json
