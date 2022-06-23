@@ -1,6 +1,9 @@
 # revila_backend
 Em desenvolvimento - Servidor para app de jogos
 
+## Start
+Antes de rodar "npm start" pela primeira vez, crie um arquivo .env baseado no .env_example
+
 ## Servidor de jogos Fake
 Rode "npm run start-fake-game-rest-api" para iniciar um servidor fake contendo alguns jogos (fake_db.json)  
 
