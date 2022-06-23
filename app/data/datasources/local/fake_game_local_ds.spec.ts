@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig, AxiosResponse, AxiosResponseHeaders } from "axios";
 import { ServerException } from "../../../core/failures/exceptions";
 import { Game } from "../../../domain/entities/game";
 import { FakeGameLocalDsImpl } from "./fake_game_local_ds";
@@ -19,9 +19,33 @@ describe("fake game remote ds impl", function () {
 
     it("should throw ServerException if call to api is fail", async function () {
         const mockAxios: any = {
-            get: jest.fn().mockRejectedValue(new ServerException())
+            get: jest.fn().mockReturnValue(new MockFailResponse())
         }
         const ds = new FakeGameLocalDsImpl(mockAxios);
-        expect(async () => await ds.searchGames("max")).toThrow(new ServerException());
+        await expect(ds.searchGames("max")).rejects.toThrow(new ServerException());
     });
 });
+
+class MockFailResponse implements AxiosResponse {
+    data: any;
+    status: number;
+    statusText: string;
+    headers: AxiosResponseHeaders;
+    config: AxiosRequestConfig<any>;
+    request?: any;
+
+
+    constructor(){
+        this.data = {
+            "message": "generic error"
+        };
+        this.status = 400;
+        this.statusText= "error";
+        this.headers = {
+            "Content-Type": "application/json"
+        };
+        this.config = {};
+
+    }
+
+}
